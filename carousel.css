@@ -7,9 +7,7 @@
     width: 132px;
     margin: 0 auto;
     margin-top: 0px;
-    /* margin-top: 30px; */
     font-size: 30px;
-    /* padding-top: 5px; */
     color:white;
 }
 .ml5 {
@@ -315,6 +313,7 @@ p {
   border-color: transparent transparent transparent #121519;
   margin-left: 2px;
 }
+
 .box__img {
   display: block;
   width: 100%;
