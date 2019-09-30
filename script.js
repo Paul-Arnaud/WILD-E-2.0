@@ -1,17 +1,4 @@
-      function shownav() {
-        var plus = document.getElementById("btn-plus");
-        var nav = document.getElementById("side-nav");
-        if (nav.style.display=="none") {
-          nav.style.display="block";
-          plus.innerHTML="-";
-        }
-        else {
-          nav.style.display="none";
-          plus.innerHTML="+";
-        }
-      }
-
-
+// animation pour le titre WILD-E
 anime.timeline({loop: true})
   .add({
     targets: '.ml5 .line',
@@ -55,4 +42,71 @@ anime.timeline({loop: true})
   })
   ;
 
+// Partie pour faire l'animation de scroll
+// objet contenant tous les selecteurs dont on à besoin
+  const SELECTORS = { 
+    section: '[data-section]',
+    scrollTo: '[data-scroll-to]',
+    scrollDir: '[data-scroll-dir]'
+  }
+
+
+  const sectionsArray = Array.from(document.querySelectorAll(SELECTORS.section)) //on récupère toutes les sections de la page
+  const scrollToElements = document.querySelectorAll(SELECTORS.scrollTo) //On récupère les endroit ou on peut scroll
+  const scrollDirElements = document.querySelectorAll(SELECTORS.scrollDir) // On récupère les boutons pour le scroll
   
+  let currentSectionIndex = 0 // On définit une variable pour la section dans laquelle on se trouve  
+  
+  const getScrollTarget = dir => { // fonction pour savoir ou on doit scroll
+    if (dir === 'prev' && currentSectionIndex > 0) {
+      currentSectionIndex--
+      return sectionsArray[currentSectionIndex]
+    }
+    if (dir === 'next' && currentSectionIndex < sectionsArray.length-1) {
+      currentSectionIndex++
+      return sectionsArray[currentSectionIndex]
+    }
+    return false
+  }
+  
+  scrollDirElements.forEach(el => {  //fonction pour ecouter le click sur les boutons fleches et faire le scroll 
+    el.addEventListener('click', () => {
+      const direction = el.dataset.scrollDir
+      const target = getScrollTarget(direction)
+      
+      if (target) {
+        target.scrollIntoView({ behavior: 'smooth' });
+      }
+    })
+  })
+  
+  scrollToElements.forEach(el => { //fonction pour ecouter le click sur les liens de la nav et faire le scroll 
+    el.addEventListener('click', e => {
+      e.preventDefault()
+      const targetId = el.getAttribute('href')
+      const target = document.querySelector(targetId)
+      
+      if (target) {
+        sectionsArray.forEach((section, index) => {
+          if (section.id === targetId.replace('#','')) {
+            currentSectionIndex = index
+          }
+        })
+        target.scrollIntoView({ behavior: 'smooth' });
+      }
+    })
+  })
+
+      // fonction pour afficher / masquer une side nav (on ne s'en sert plus)
+      // function shownav() {
+      //   var plus = document.getElementById("btn-plus");
+      //   var nav = document.getElementById("side-nav");
+      //   if (nav.style.display=="none") {
+      //     nav.style.display="block";
+      //     plus.innerHTML="-";
+      //   }
+      //   else {
+      //     nav.style.display="none";
+      //     plus.innerHTML="+";
+      //   }
+      // }

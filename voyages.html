@@ -31,7 +31,7 @@
       </div>
     </header>
     
-    <nav class="nav"> <!--menu side-->
+    <nav class="nav"> <!--menu side nav-->
       <ul class="nav__menu">
         <li class="nav__item">
                     <a href="#video" class="nav__link" data-scroll-to>
@@ -92,7 +92,7 @@
     </nav>
     
     <main class="main">
-      <article class="section" id="video" data-section>
+      <article class="section" id="video" data-section> <!-- section pour inserer la video-->
 
                 
         </article>
@@ -132,16 +132,16 @@
         </div>
       </article>
   
-      <!--section Egypte  modèle pour les autres sections -->
+      <!--section Egypte modèle pour les autres sections -->
       <article class="section" id="egypte" data-section>
-          <header class="section__header" style="background-image: url('img/asterix.png');">
-            <h1 class="section__title">Egypte</h1>
-            <p class="section__subtitle"></p>
+          <header class="section__header" style="background-image: url('img/asterix.png');"> <!--image de fond de la section-->
+            <h1 class="section__title">Egypte</h1> <!--titre-->
+            <p class="section__subtitle"></p><!--sous titre si on en a besoin-->
           </header>
-          <div class="section__content">
-            <ul class="boxgrid">
+          <div class="section__content"> 
+            <ul class="boxgrid"> <!-- grille sur laquel les boites contenant les images/textes sont palcées-->
               <li class="boxgrid__item">
-                <a href="#" class="box box--weather">
+                <a href="#" class="box box--weather"> 
                   <p><span class="text--large">-50 Avant J.C</p>
                 </a>
               </li>
@@ -265,8 +265,8 @@
     
 
 
-
-    <button class="scrollctrl scrollctrl--prev" data-scroll-dir="prev">
+<!-- boutons en haut et en bas pour scroll entre les sections en mode desktop-->
+    <button class="scrollctrl scrollctrl--prev" data-scroll-dir="prev"> 
       <span class="arrow arrow--large arrow--up"></span>
     </button>
     <button class="scrollctrl scrollctrl--next" data-scroll-dir="next">
@@ -286,60 +286,7 @@
         <a href="">Mentions Légales</a>
     </footer> -->
     
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js"></script>
-    <script src="script.js"></script>
-    <script>
-
-        const SELECTORS = {
-  section: '[data-section]',
-  scrollTo: '[data-scroll-to]',
-  scrollDir: '[data-scroll-dir]'
-}
-const sectionsArray = Array.from(document.querySelectorAll(SELECTORS.section))
-const scrollToElements = document.querySelectorAll(SELECTORS.scrollTo)
-const scrollDirElements = document.querySelectorAll(SELECTORS.scrollDir)
-
-let currentSectionIndex = 0
-
-const getScrollTarget = dir => {
-  if (dir === 'prev' && currentSectionIndex > 0) {
-    currentSectionIndex--
-    return sectionsArray[currentSectionIndex]
-  }
-  if (dir === 'next' && currentSectionIndex < sectionsArray.length-1) {
-    currentSectionIndex++
-    return sectionsArray[currentSectionIndex]
-  }
-  return false
-}
-
-scrollDirElements.forEach(el => {
-  el.addEventListener('click', () => {
-    const direction = el.dataset.scrollDir
-    const target = getScrollTarget(direction)
-    
-    if (target) {
-      target.scrollIntoView({ behavior: 'smooth' });
-    }
-  })
-})
-
-scrollToElements.forEach(el => {
-  el.addEventListener('click', e => {
-    e.preventDefault()
-    const targetId = el.getAttribute('href')
-    const target = document.querySelector(targetId)
-    
-    if (target) {
-      sectionsArray.forEach((section, index) => {
-        if (section.id === targetId.replace('#','')) {
-          currentSectionIndex = index
-        }
-      })
-      target.scrollIntoView({ behavior: 'smooth' });
-    }
-  })
-})
-    </script>
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js"></script><!--balise script pour aller chercher la librairie anime.js-->
+    <script src="script.js"></script> <!-- lien vers script.js-->
 </body>
 </html>
