@@ -104,6 +104,11 @@ p {
       scroll-snap-points-y: repeat(100%);
 }
 
+#rec::before{
+  content: "🔴 ";
+  font-size: 14px;
+}
+
 .footer {
   display: flex;
   align-items: center;
