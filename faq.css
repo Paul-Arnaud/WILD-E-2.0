@@ -1,0 +1,32 @@
+#faq{
+    padding-top: 50px;
+}
+
+.titre-faq{
+    height: 50px;
+    display: flex;
+    align-items: center;
+    color: white;
+    font-size: 22px;
+    font-weight: bold;
+
+}
+
+.ul1 {
+    border: 1px solid white;
+    padding:10px;
+    margin-bottom:20px;
+
+}
+
+li {
+    color: white;
+}
+
+li a {
+    color: white;
+}
+
+.reponse{
+    display:none;
+}
