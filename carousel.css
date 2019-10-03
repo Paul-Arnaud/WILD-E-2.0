@@ -126,11 +126,9 @@ body {
 }
 
 .container {
-  max-width: 400px;
   width: 100%;
   margin: 0 auto;
   position: relative;
-  background-image:
 }
 
 #contact input[type="text"],
@@ -144,6 +142,7 @@ body {
 
 #contact {
   background: #F9F9F9;
+  border-radius: 10px;
   padding: 25px;
   margin: 150px 0;
   box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
@@ -151,17 +150,10 @@ body {
 
 #contact h3 {
   display: block;
+  text-align: center;
   font-size: 30px;
   font-weight: 300;
   margin-bottom: 10px;
-  color: black;
-}
-
-#contact h4 {
-  margin: 5px 0 15px;
-  display: block;
-  font-size: 13px;
-  font-weight: 400;
   color: black;
 }
 
@@ -171,6 +163,7 @@ fieldset {
   min-width: 100%;
   padding: 0;
   width: 100%;
+  text-align: center;
 }
 
 #contact input[type="text"],
@@ -204,7 +197,7 @@ fieldset {
 
 #contact button[type="submit"] {
   cursor: pointer;
-  width: 100%;
+  width: 16%;
   border: none;
   background: #4CAF50;
   color: #FFF;
