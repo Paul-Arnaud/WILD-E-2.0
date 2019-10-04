@@ -115,19 +115,19 @@
             </li>
             <li class="boxgrid__item boxgrid__item--wide">
               <a href="#" class="box box--image">
-                <img src="img/dinosaure1.jpg" class="box__img" alt="" />
+                <img src="img/dinosaure1.jpg" class="box__img" alt="" id="image1" onclick="modal(1);"/>
               </a>
             </li>
             <li class="boxgrid__item">
             </li>
             <li class="boxgrid__item boxgrid__item--push">
               <a href="#" class="box box--image">
-                <img src="img/2-diplo.jpg" class="box__img" alt="" />
+                <img src="img/2-diplo.jpg" class="box__img" alt="" id="image2" onclick="modal(2);"/>
               </a>
             </li>
             <li class="boxgrid__item boxgrid__item--push">
               <a href="#" class="box box--image">
-                <img src="img/2-tyrannosaures-resized.jpg" class="box__img" alt="" />
+                <img src="img/2-tyrannosaures-resized.jpg" class="box__img" alt="" id="image3" onclick="modal(3);"/>
               </a>
             </li>
           </ul>
@@ -149,17 +149,17 @@
               </li>
               <li class="boxgrid__item">
                 <a href="#" class="box box--image">
-                  <img src="img/chair-484707_1920.jpg" class="box__img" alt="" />
+                  <img src="img/chair-484707_1920.jpg" class="box__img" alt="" id="image4" onclick="modal(4);"/>
                 </a>
               </li>
               <li class="boxgrid__item boxgrid__item--push">
                 <a href="#" class="box box--image">
-                  <img src="img/bedouin.jpg" class="box__img" alt="" />
+                  <img src="img/bedouin.jpg" class="box__img" alt="" id="image5" onclick="modal(5);"/>
                 </a>
               </li>
               <li class="boxgrid__item boxgrid__item--wide">
                 <a href="#" class="box box--image">
-                  <img src="img/gamer.jpg" class="box__img" alt="" />
+                  <img src="img/gamer.jpg" class="box__img" alt="" id="image6" onclick="modal(6);"/>
                 </a>
               </li>
               <li class="boxgrid__item boxgrid__item--push">
@@ -192,17 +192,17 @@
             </li>
             <li class="boxgrid__item">
               <a href="#" class="box box--image">
-                <img src="img/nara-temple-soucoupe.jpg" class="box__img" alt="" />
+                <img src="img/nara-temple-soucoupe.jpg" class="box__img" alt="" id="image7" onclick="modal(7);"/>
               </a>
             </li>
             <li class="boxgrid__item boxgrid__item--push">
               <a href="#" class="box box--image">
-                <img src="img/kumamoto.jpg" class="box__img" alt="" />
+                <img src="img/kumamoto.jpg" class="box__img" alt="" id="image8" onclick="modal(8);"/>
               </a>
             </li>
             <li class="boxgrid__item boxgrid__item--wide">
               <a href="#" class="box box--image">
-                <img src="img/suizenji-jojuen-alien.jpg" class="box__img" alt="" />
+                <img src="img/suizenji-jojuen-alien.jpg" class="box__img" alt="" id="image9" onclick="modal(9);"/>
               </a>
             </li>
             <!-- <li class="boxgrid__item boxgrid__item--push">
@@ -236,22 +236,22 @@
           </li>
           <li class="boxgrid__item">
             <a href="#" class="box box--image">
-              <img src="img/paris-animaux.jpg" class="box__img" alt="" />
+              <img src="img/paris-animaux.jpg" class="box__img" alt="" id="image10" onclick="modal(10);"/>
             </a>
           </li>
           <li class="boxgrid__item boxgrid__item--push">
             <a href="#" class="box box--image">
-              <img src="img/eiffel.jpg" class="box__img" alt="" />
+              <img src="img/eiffel.jpg" class="box__img" alt="" id="image11" onclick="modal(11);"/>
             </a>
           </li>
           <li class="boxgrid__item boxgrid__item--wide">
             <a href="#" class="box box--image">
-              <img src="img/disneyP.jpg" class="box__img" alt=""/>
+              <img src="img/disneyP.jpg" class="box__img" alt="" id="image12" onclick="modal(12);">
             </a>
           </li>
           <li class="boxgrid__item boxgrid__item--push">
             <a href="#" class="box box--image">
-              <img src="img/notredame.jpeg" class="box__img" alt="notre dame"/>
+              <img src="img/notredame.jpeg" class="box__img" alt="notre dame" id="image13" onclick="modal(13);"/>
             </a>
           </li>
           <li class="boxgrid__item">
@@ -265,7 +265,124 @@
     </article>
   </main>
     
+<!--modals for images-->
+  <div id="modal1" class="modal">
+    <!-- The Close Button -->
+    <span class="close" id="close1">&times;</span>
+    <!-- Modal Content (The Image) -->
+    <img class="modal-content" id="img01" src="img/dinosaure1.jpg">
+    <!-- Modal Caption (Image Text) -->
+    <div id="caption">Wild-Ʃ Surpris par un Brachiosaure</div>
+  </div>
 
+  <div id="modal2" class="modal">
+    <!-- The Close Button -->
+    <span class="close" id="close2">&times;</span>
+    <!-- Modal Content (The Image) -->
+    <img class="modal-content" id="img02" src="img/2-diplo.jpg">
+    <!-- Modal Caption (Image Text) -->
+    <div id="caption">Deux Diplodocus</div>
+  </div>
+
+  <div id="modal3" class="modal">
+    <!-- The Close Button -->
+    <span class="close" id="close3">&times;</span>
+    <!-- Modal Content (The Image) -->
+    <img class="modal-content" id="img03" src="img/2-tyrannosaures-resized.jpg">
+    <!-- Modal Caption (Image Text) -->
+    <div id="caption">Des tyrannosaures ! Ça fait peur !!!</div>
+  </div>
+
+  <div id="modal4" class="modal">
+    <!-- The Close Button -->
+    <span class="close" id="close4">&times;</span>
+    <!-- Modal Content (The Image) -->
+    <img class="modal-content" id="img04" src="img/chair-484707_1920.jpg">
+    <!-- Modal Caption (Image Text) -->
+    <div id="caption">Le trone de Cléopatre</div>
+  </div>
+
+  <div id="modal5" class="modal">
+    <!-- The Close Button -->
+    <span class="close" id="close5">&times;</span>
+    <!-- Modal Content (The Image) -->
+    <img class="modal-content" id="img05" src="img/bedouin.jpg">
+    <!-- Modal Caption (Image Text) -->
+    <div id="caption">Un eleveur de chèvre égyptien</div>
+  </div>
+
+  <div id="modal6" class="modal">
+    <!-- The Close Button -->
+    <span class="close" id="close6">&times;</span>
+    <!-- Modal Content (The Image) -->
+    <img class="modal-content" id="img06" src="img/gamer.jpg">
+    <!-- Modal Caption (Image Text) -->
+    <div id="caption">Un temple à Alexandrie</div>
+  </div>
+  <div id="modal7" class="modal">
+    <!-- The Close Button -->
+    <span class="close" id="close7">&times;</span>
+    <!-- Modal Content (The Image) -->
+    <img class="modal-content" id="img07" src="img/nara-temple-soucoupe.jpg">
+    <!-- Modal Caption (Image Text) -->
+    <div id="caption">Quand j'ai survolé le temple de Nara</div>
+  </div>
+
+  <div id="modal8" class="modal">
+    <!-- The Close Button -->
+    <span class="close" id="close8">&times;</span>
+    <!-- Modal Content (The Image) -->
+    <img class="modal-content" id="img08" src="img/kumamoto.jpg">
+    <!-- Modal Caption (Image Text) -->
+    <div id="caption">Le village de Kumamoto</div>
+  </div>
+
+  <div id="modal9" class="modal">
+    <!-- The Close Button -->
+    <span class="close" id="close9">&times;</span>
+    <!-- Modal Content (The Image) -->
+    <img class="modal-content" id="img09" src="img/suizenji-jojuen-alien.jpg">
+    <!-- Modal Caption (Image Text) -->
+    <div id="caption">Je frime dans le jardin de Suizenji Jojuen</div>
+  </div>
+
+  <div id="modal10" class="modal">
+    <!-- The Close Button -->
+    <span class="close" id="close10">&times;</span>
+    <!-- Modal Content (The Image) -->
+    <img class="modal-content" id="img10" src="img/paris-animaux.jpg">
+    <!-- Modal Caption (Image Text) -->
+    <div id="caption">Des animaux au pied de la tour Eiffel en ruine</div>
+  </div>
+  
+  <div id="modal11" class="modal">
+    <!-- The Close Button -->
+    <span class="close" id="close11">&times;</span>
+    <!-- Modal Content (The Image) -->
+    <img class="modal-content" id="img11" src="img/eiffel.jpg">
+    <!-- Modal Caption (Image Text) -->
+    <div id="caption">La tour Eiffel avant la catastrophe</div>
+  </div>
+
+  <div id="modal12" class="modal">
+    <!-- The Close Button -->
+    <span class="close" id="close12">&times;</span>
+    <!-- Modal Content (The Image) -->
+    <img class="modal-content" id="img12" src="img/disneyP.jpg">
+    <!-- Modal Caption (Image Text) -->
+    <div id="caption">Les humains se sont réfugiés au parc Disneyland où ils se deguisent en aliens</div>
+  </div>
+
+  <div id="modal13" class="modal">
+    <!-- The Close Button -->
+    <span class="close" id="close13">&times;</span>
+    <!-- Modal Content (The Image) -->
+    <img class="modal-content" id="img13" src="img/notredame.jpeg">
+    <!-- Modal Caption (Image Text) -->
+    <div id="caption">La chatédrale Notre-Dame en feu</div>
+  </div>
+
+  <!--fin modals-->
 
 <!-- boutons en haut et en bas pour scroll entre les sections en mode desktop-->
     <button class="scrollctrl scrollctrl--prev" data-scroll-dir="prev"> 
