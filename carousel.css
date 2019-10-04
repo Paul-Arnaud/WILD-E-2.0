@@ -207,8 +207,8 @@ body {
   font-weight: 100;
   font-size: 15px;
   line-height: 20px;
-  color: #777;
-  
+  /* color: #777;
+   */
 }
 
 .container {
@@ -445,6 +445,17 @@ footer a img {
   padding: 0 1rem;
 }
 
+#video {
+  width:90%;
+  margin:0 auto 800px auto;
+  padding-top:30px;
+}
+
+#video video {
+  width:100%;
+  border-radius:5px;
+}
+
 .box {
   display: flex;
   flex: 1 0 0;
@@ -643,6 +654,10 @@ button:focus {
   box-shadow: 0 0 0 1px #66AEE5;
 }
 
+#logo-insta{
+  display:none;
+}
+
 @media screen and (min-width: 1024px) {
   .section {
     margin-bottom: 750px;
@@ -665,6 +680,9 @@ button:focus {
   }
   .scrollctrl {
     display: flex;
+  }
+  #logo-insta {
+    display:none;
   }
 }
 .boxgrid {
@@ -699,6 +717,13 @@ button:focus {
     font-weight: bold;
     position:initial;
   }
+  #logo-insta {
+    position:fixed;
+    bottom: 50px;
+    left:20px;
+    filter:invert(1);
+    display:block;
+   }
 }
 
 @media screen and (min-width: 750px) {
@@ -710,4 +735,5 @@ button:focus {
     grid-column: span 2;
     padding-left: 30%;
   }
+
 }
